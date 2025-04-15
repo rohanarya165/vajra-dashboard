@@ -55,12 +55,12 @@ const DowntimeCards = () => {
 
           {card.time ? (
             <>
-              <p className="text-sm text-gray-400">{card.subtitle}</p>
+              <p className="text-[12px] text-gray-400">{card.subtitle}</p>
               <p className="text-2xl font-bold mt-2 text-gray-900">{card.time}</p>
             </>
           ) : card.button && (
             <>
-              <p className="text-sm text-gray-400 mt-1">{card.subtitle}</p>
+              <p className="text-[12px] text-gray-400 mt-1">{card.subtitle}</p>
               <div className='flex justify-between'>
 
               <div className="flex items-center mt-3">

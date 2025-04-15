@@ -38,16 +38,16 @@ export default function HospitalDashboardCard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <div className="bg-blue-50 p-4 rounded-xl">
-          <p className="text-sm text-blue-700 font-medium">Performance</p>
-          <p className="text-xl font-bold text-blue-800">98.5%</p>
+          <p className="text-[10px] text-blue-700 font-medium">Performance</p>
+          <p className="text-xl font-bold text-black">98.5%</p>
           <div className="bg-blue-200 h-2 rounded mt-2">
             <div className="bg-blue-600 h-2 rounded w-[98.5%]"></div>
           </div>
         </div>
 
         <div className="bg-green-50 p-4 rounded-xl">
-          <p className="text-sm text-green-700 font-medium">Satisfaction</p>
-          <p className="text-xl font-bold text-green-800">4.8/5</p>
+          <p className="text-[10px] text-green-700 font-medium">Satisfaction</p>
+          <p className="text-xl font-bold text-black">4.8/5</p>
           <div className="flex gap-1 mt-2">
             {[...Array(5)].map((_, i) => (
               <span key={i} className="text-green-500 text-lg leading-none">★</span>
@@ -56,8 +56,8 @@ export default function HospitalDashboardCard() {
         </div>
 
         <div className="bg-purple-50 p-4 rounded-xl">
-          <p className="text-sm text-purple-700 font-medium">Asset Utilization</p>
-          <p className="text-xl font-bold text-purple-800">95.3%</p>
+          <p className="text-[10px] text-purple-700 font-medium">Asset Utilization</p>
+          <p className="text-xl font-bold text-black">95.3%</p>
           <div className="flex gap-1 mt-2">
             {[...Array(6)].map((_, i) => (
               <div key={i} className={`w-2 h-2 rounded-full ${i < 5 ? 'bg-purple-600' : 'bg-purple-200'}`}></div>
@@ -65,20 +65,18 @@ export default function HospitalDashboardCard() {
           </div>
         </div>
               {/* Bottom Info */}
-      {/* <div className="grid grid-cols-1 sm:grid-cols-3 text-center gap-4"> */}
         <div>
-          <p className="text-sm text-gray-500">Assets</p>
-          <p className="text-xl font-semibold text-gray-800">487</p>
+          <p className="text-[10px] text-gray-500">Assets</p>
+          <p className="text-xl mt-2 font-semibold text-gray-800">487</p>
         </div>
         <div>
-          <p className="text-sm text-gray-500">Services</p>
-          <p className="text-xl font-semibold text-gray-800">24</p>
+          <p className="text-[10px] text-gray-500">Services</p>
+          <p className="text-xl mt-2 font-semibold text-gray-800">24</p>
         </div>
         <div>
-          <p className="text-sm text-gray-500">Uptime</p>
-          <p className="text-xl font-semibold text-gray-800">99.9%</p>
+          <p className="text-[10px] text-gray-500">Uptime</p>
+          <p className="text-xl mt-2 font-semibold text-gray-800">99.9%</p>
         </div>
-      {/* </div> */}
       </div>
 
         {/* Right Panel */}

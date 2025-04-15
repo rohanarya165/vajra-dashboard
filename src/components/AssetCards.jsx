@@ -1,5 +1,5 @@
 // components/AssetCards.jsx
-import { MoreHorizontal, ArrowRight, BarChart3, AlertCircle, Network } from 'lucide-react';
+import { BarChart3, AlertCircle, Network } from 'lucide-react';
 
 const AssetCards = () => {
   const cards = [

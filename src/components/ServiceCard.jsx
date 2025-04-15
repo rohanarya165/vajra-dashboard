@@ -51,7 +51,7 @@ export default function ServicesCard(props) {
                                         <p className="text-[12px] text-gray-600 mb-2">{title}</p>
                                         <p className={`font-semibold ${text}`}>{value}</p>
                                     </div>
-                                    <div className="w-10 h-10 mx-auto">
+                                    <div className="w-15 h-15 mx-auto">
                                         <CircularProgressbarWithChildren
                                             value={percent}
                                             strokeWidth={10}
