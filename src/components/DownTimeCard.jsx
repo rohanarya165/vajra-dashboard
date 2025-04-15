@@ -61,6 +61,8 @@ const DowntimeCards = () => {
                 )}
               </div>
               <p className="text-sm text-gray-400 mt-1">{card.subtitle}</p>
+              <div className='flex justify-between'>
+
               <div className="flex items-center mt-3">
                 {card.team.map((t, idx) => (
                   <span
@@ -79,6 +81,7 @@ const DowntimeCards = () => {
                 {card.button}
                 <ArrowRight className="ml-2 w-4 h-4" />
               </button>
+              </div>
             </>
           ) : (
             <h2 className="text-sm mt-4 font-medium text-gray-800">{card.title}</h2>
