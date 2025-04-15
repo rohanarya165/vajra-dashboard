@@ -42,16 +42,18 @@ import {
       <div className="w-[250px] bg-[#0E1D34] text-white h-screen flex flex-col justify-between">
         {/* TOP Logo + Menu */}
         <div className="p-5">
-          <div className="text-2xl font-bold mb-8">Vajra</div>
+          <div className="text-[70px] py-8 text-center">Vajra</div>
           <div className="space-y-2">
             {menu.map((item, idx) => (
               <div key={idx}>
                 <div
                   onClick={() => item.nested && toggleMenu(item.name)}
-                  className="flex items-center justify-between px-3 py-2 rounded-md hover:bg-[#1E2D44] cursor-pointer"
-                >
+                  className={`flex items-center justify-between px-3 py-2 rounded-[100px] cursor-pointer ${openItem === item.name ? "bg-white text-blue-500 " : ""}`}
+                >{console.log(openItem , item.name )}
                   <div className="flex items-center gap-3 text-sm font-medium">
+                    <div className={`${openItem === item.name ? "p-2 rounded-[100%] bg-blue-500 text-white" : "p-2"}`}>
                     <item.icon size={18} />
+                    </div>
                     {item.name}
                   </div>
                   {item.nested &&
@@ -64,11 +66,11 @@ import {
   
                 {/* NESTED */}
                 {item.nested && openItem === item.name && (
-                  <div className="ml-9 mt-1 space-y-1 text-sm text-gray-300 transition-all duration-200">
+                  <div className="ml-9 mt-1 space-y-1 border-l text-sm text-gray-300 transition-all duration-200">
                     {item.nested.map((sub, subIdx) => (
                       <div
                         key={subIdx}
-                        className="py-1 px-2 rounded hover:bg-[#2A3B55] cursor-pointer"
+                        className="py-1 px-4 rounded hover:bg-[#2A3B55] cursor-pointer"
                       >
                         {sub}
                       </div>
