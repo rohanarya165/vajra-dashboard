@@ -36,16 +36,18 @@ export default function NeedAttentionTable() {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-sm w-full overflow-x-auto">
-      <div className="flex justify-between items-center mb-6 min-w-[600px]">
+    <div className="bg-white rounded-2xl p-4 shadow-sm w-full overflow-x-auto">
+      {/* Title + Button */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
         <h2 className="text-xl font-semibold text-gray-800">Need Attention</h2>
         <button className="flex items-center gap-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-sm">
           <Plus size={16} /> Add New
         </button>
       </div>
 
-      <div className="overflow-auto">
-        <table className="w-full text-sm text-left">
+      {/* Responsive Table */}
+      <div className="w-full overflow-x-auto">
+        <table className="min-w-[500px] w-full text-sm text-left">
           <thead className="bg-gray-50 text-gray-500">
             <tr>
               <th scope="col" className="px-6 py-4">Asset Code</th>

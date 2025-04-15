@@ -20,13 +20,11 @@ const pieData2 = [
 
 function App() {
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex lg:h-screen md:h-screen ">
       <Sidebar />
       <div className="flex-1 flex flex-col">
-        <Topbar />
-        
-        {/* Yeh raha main area */}
-        <main className="p-6 bg-[#F5F7FA] flex-1 overflow-y-auto">
+        <Topbar />        
+        <div className="p-6 bg-[#F5F7FA] flex-1 overflow-y-auto">
           <div className="flex flex-col gap-6">
           <HospitalDashboardCard/>
           <AssetCards/>
@@ -35,7 +33,7 @@ function App() {
           <ServicesCard barTitle={"Incidents"} pieTitle={"Warranty Status"} pieData={pieData2}/>
           <NeedAttentionTable/>
           </div>
-        </main>
+        </div>
       </div>
     </div>
   )

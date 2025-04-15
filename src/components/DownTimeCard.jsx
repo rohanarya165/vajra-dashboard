@@ -1,4 +1,3 @@
-// components/DowntimeCards.jsx
 import { MoreHorizontal, ArrowRight, Box } from 'lucide-react';
 
 const DowntimeCards = () => {
@@ -33,13 +32,13 @@ const DowntimeCards = () => {
         >
           <div className="flex mb-4 justify-between gap-2 items-start">
             <div className='flex gap-2 w-full'>
-                {card.iconDot ?  <div
-              className={`w-8 h-8 rounded-full flex items-center justify-center ${card.iconBg}`}
-            >
-              <div className={`w-2 h-2 rounded-full ${card.iconDot || 'bg-blue-500'}`} />
-            </div> : <Box className='text-[#2563EB]'/>}
-           
-            <div className="flex grow items-center justify-between w-full flex-wrap gap-y-1">
+              {card.iconDot ? <div
+                className={`w-8 h-8 rounded-full flex items-center justify-center ${card.iconBg}`}
+              >
+                <div className={`w-2 h-2 rounded-full ${card.iconDot || 'bg-blue-500'}`} />
+              </div> : <Box className='text-[#2563EB]' />}
+
+              <div className="flex grow items-center justify-between w-full flex-wrap gap-y-1">
                 <h2 className="text-sm font-medium text-gray-800">
                   {card.title}
                 </h2>
@@ -63,24 +62,24 @@ const DowntimeCards = () => {
               <p className="text-[12px] text-gray-400 mt-1">{card.subtitle}</p>
               <div className='flex justify-between'>
 
-              <div className="flex items-center mt-3">
-                {card.team.map((t, idx) => (
-                  <span
-                    key={idx}
-                    className={`w-8 h-8 -ml-2 first:ml-0 border-2 border-white rounded-full text-white text-xs font-medium flex items-center justify-center`}
-                    style={{
-                      backgroundColor: ['#ec4899', '#3b82f6', '#10b981', '#f59e0b', '#e5e7eb'][idx] || '#9ca3af',
-                      color: idx === 4 ? '#374151' : 'white',
-                    }}
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-              <button className="h-[28px] bg-linear-to-r mt-[12px] from-[#2563EB] to-[#153885] text-white flex items-center justify-center gap-2 px-4 py-2 rounded-[8px] text-[10px] mt-[10px s] text-sm whitespace-nowrap">
-              {card.button}
-              <ArrowRight className="ml-2 w-4 h-4" />
-          </button>
+                <div className="flex items-center mt-3">
+                  {card.team.map((t, idx) => (
+                    <span
+                      key={idx}
+                      className={`w-8 h-8 -ml-2 first:ml-0 border-2 border-white rounded-full text-white text-xs font-medium flex items-center justify-center`}
+                      style={{
+                        backgroundColor: ['#ec4899', '#3b82f6', '#10b981', '#f59e0b', '#e5e7eb'][idx] || '#9ca3af',
+                        color: idx === 4 ? '#374151' : 'white',
+                      }}
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <button className="h-[28px] bg-linear-to-r mt-[12px] from-[#2563EB] to-[#153885] text-white flex items-center justify-center gap-2 px-4 py-2 rounded-[8px] text-[10px] mt-[10px s] text-sm whitespace-nowrap">
+                  {card.button}
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </button>
               </div>
             </>
           )}

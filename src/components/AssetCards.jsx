@@ -1,4 +1,3 @@
-// components/AssetCards.jsx
 import { BarChart3, AlertCircle, Network } from 'lucide-react';
 
 const AssetCards = () => {
