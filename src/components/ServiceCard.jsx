@@ -7,20 +7,21 @@ import {
 import "react-circular-progressbar/dist/styles.css";
 import { PieChart, Pie, Cell } from "recharts";
 
-const pieData = [
-    { name: "Calibrated", value: 45, color: "#3b82f6" },
-    { name: "Not Calibrated", value: 35, color: "#fca5a5" },
-    { name: "Not Required", value: 20, color: "#9ca3af" },
-];
+// const pieData = [
+//     { name: "Calibrated", value: 45, color: "#3b82f6" },
+//     { name: "Not Calibrated", value: 35, color: "#fca5a5" },
+//     { name: "Not Required", value: 20, color: "#9ca3af" },
+// ];
 
-export default function ServicesCard() {
+export default function ServicesCard(props) {
+    const {pieData} = props
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl ">
             {/* Left Panel */}
             <div>
                 <div className="bg-white rounded-2xl h-full shadow p-6 ">
 
-                    <h2 className="text-lg font-semibold mb-6 text-gray-800"> Services</h2>
+                    <h2 className="text-lg font-semibold mb-6 text-gray-800"> {props.barTitle}</h2>
                     <div className="flex flex-col md:flex-row gap-6 w-full">
                         {/* Status Cards */}
                         <div className="flex flex-row md:flex-col gap-8 w-full md:w-auto md:max-w-[150px] justify-between">
@@ -108,7 +109,7 @@ export default function ServicesCard() {
             {/* Right Panel - Calibration Status */}
             <div className="bg-white rounded-2xl shadow p-6 w-full flex flex-col justify-between">
                 <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-lg font-semibold text-gray-800">Calibration Status</h2>
+                    <h2 className="text-lg font-semibold text-gray-800">{props.pieTitle}</h2>
                     <div className="text-sm text-gray-500 border px-3 py-1 rounded-xl">📅 Mar 2025</div>
                 </div>
 
@@ -134,9 +135,9 @@ export default function ServicesCard() {
                     {pieData.map((item, idx) => (
                         <div
                             key={idx}
-                            className={`rounded-xl p-4 text-center ${item.name === "Calibrated"
+                            className={`rounded-xl p-4 text-center ${idx == "0"
                                     ? "bg-blue-50 text-blue-600"
-                                    : item.name === "Not Calibrated"
+                                    : idx == "1"
                                         ? "bg-red-50 text-red-600"
                                         : "bg-gray-100 text-gray-700"
                                 }`}

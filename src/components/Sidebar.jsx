@@ -82,12 +82,12 @@ import {
   
         {/* BOTTOM Buttons */}
         <div className="px-4 py-6 space-y-3">
-          <button className="w-full flex items-center gap-3 justify-center bg-[#132542] hover:bg-[#1F3556] py-2 rounded-full text-sm font-medium">
-            <Headphones size={16} />
+          <button className="w-full relative flex items-center gap-3 justify-center border border-white text-white cursor-pointer  py-2 rounded-full text-sm font-semibold">
+            <Headphones size={16} className='absolute left-4'/>
             Contact us
           </button>
-          <button className="w-full flex items-center gap-3 justify-center bg-white text-[#0E1D34] hover:bg-gray-100 py-2 rounded-full text-sm font-semibold">
-            <LogOut size={16} />
+          <button className="w-full relative flex items-center gap-3 justify-center border border-white text-white cursor-pointer py-2 rounded-full text-sm font-semibold">
+            <LogOut size={16} className='absolute left-4' />
             Log Out
           </button>
         </div>
