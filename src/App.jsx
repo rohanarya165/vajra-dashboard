@@ -14,10 +14,12 @@ function App() {
         
         {/* Yeh raha main area */}
         <main className="p-6 bg-[#F5F7FA] flex-1 overflow-y-auto">
+          <div className="flex flex-col gap-6">
           <HospitalDashboardCard/>
           <DowntimeCards/>
           <ServicesCard/>
           <NeedAttentionTable/>
+          </div>
         </main>
       </div>
     </div>
