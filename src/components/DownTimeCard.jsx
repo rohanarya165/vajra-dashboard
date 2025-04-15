@@ -32,25 +32,13 @@ const DowntimeCards = () => {
           className="bg-white rounded-2xl p-4 shadow-sm flex flex-col justify-between"
         >
           <div className="flex justify-between items-start">
+            <div className='flex gap-2'>
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center ${card.iconBg}`}
             >
               <div className={`w-2 h-2 rounded-full ${card.iconDot || 'bg-blue-500'}`} />
             </div>
-            <MoreHorizontal size={16} className="text-gray-400" />
-          </div>
-
-          {card.time ? (
-            <>
-              <h2 className="text-sm mt-4 font-medium text-gray-800">
-                {card.title}
-              </h2>
-              <p className="text-sm text-gray-400">{card.subtitle}</p>
-              <p className="text-2xl font-bold mt-2 text-gray-900">{card.time}</p>
-            </>
-          ) : card.button ? (
-            <>
-              <div className="flex items-center justify-between mt-4 flex-wrap gap-y-1">
+            <div className="flex items-center justify-between flex-wrap gap-y-1">
                 <h2 className="text-sm font-medium text-gray-800">
                   {card.title}
                 </h2>
@@ -60,6 +48,17 @@ const DowntimeCards = () => {
                   </span>
                 )}
               </div>
+            </div>
+            <MoreHorizontal size={16} className="text-gray-400" />
+          </div>
+
+          {card.time ? (
+            <>
+              <p className="text-sm text-gray-400">{card.subtitle}</p>
+              <p className="text-2xl font-bold mt-2 text-gray-900">{card.time}</p>
+            </>
+          ) : card.button && (
+            <>
               <p className="text-sm text-gray-400 mt-1">{card.subtitle}</p>
               <div className='flex justify-between'>
 
@@ -83,8 +82,6 @@ const DowntimeCards = () => {
               </button>
               </div>
             </>
-          ) : (
-            <h2 className="text-sm mt-4 font-medium text-gray-800">{card.title}</h2>
           )}
         </div>
       ))}
