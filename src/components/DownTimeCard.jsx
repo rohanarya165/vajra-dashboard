@@ -1,5 +1,5 @@
 // components/DowntimeCards.jsx
-import { MoreHorizontal, ArrowRight } from 'lucide-react';
+import { MoreHorizontal, ArrowRight, Box } from 'lucide-react';
 
 const DowntimeCards = () => {
   const cards = [
@@ -31,14 +31,15 @@ const DowntimeCards = () => {
           key={i}
           className="bg-white rounded-2xl p-4 shadow-sm flex flex-col justify-between"
         >
-          <div className="flex justify-between items-start">
-            <div className='flex gap-2'>
-            <div
+          <div className="flex mb-4 justify-between gap-2 items-start">
+            <div className='flex gap-2 w-full'>
+                {card.iconDot ?  <div
               className={`w-8 h-8 rounded-full flex items-center justify-center ${card.iconBg}`}
             >
               <div className={`w-2 h-2 rounded-full ${card.iconDot || 'bg-blue-500'}`} />
-            </div>
-            <div className="flex items-center justify-between flex-wrap gap-y-1">
+            </div> : <Box className='text-[#2563EB]'/>}
+           
+            <div className="flex grow items-center justify-between w-full flex-wrap gap-y-1">
                 <h2 className="text-sm font-medium text-gray-800">
                   {card.title}
                 </h2>

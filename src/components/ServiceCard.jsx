@@ -7,12 +7,6 @@ import {
 import "react-circular-progressbar/dist/styles.css";
 import { PieChart, Pie, Cell } from "recharts";
 
-// const pieData = [
-//     { name: "Calibrated", value: 45, color: "#3b82f6" },
-//     { name: "Not Calibrated", value: 35, color: "#fca5a5" },
-//     { name: "Not Required", value: 20, color: "#9ca3af" },
-// ];
-
 export default function ServicesCard(props) {
     const {pieData} = props
     return (

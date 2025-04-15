@@ -29,8 +29,8 @@ function App() {
         <main className="p-6 bg-[#F5F7FA] flex-1 overflow-y-auto">
           <div className="flex flex-col gap-6">
           <HospitalDashboardCard/>
-          <DowntimeCards/>
           <AssetCards/>
+          <DowntimeCards/>
           <ServicesCard barTitle={"Services"} pieTitle={"Calibration Status"} pieData={pieData}/>
           <ServicesCard barTitle={"Incidents"} pieTitle={"Warranty Status"} pieData={pieData2}/>
           <NeedAttentionTable/>
