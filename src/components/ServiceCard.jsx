@@ -17,6 +17,8 @@ export default function ServicesCard() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl mx-auto p-4">
       {/* Left Panel */}
+      <div>
+      <h2 className="text-lg font-semibold mt-6 text-gray-800"> Services</h2>
       <div className="bg-white rounded-2xl shadow p-6 flex flex-col md:flex-row gap-6 w-full">
         {/* Status Cards */}
         <div className="flex flex-row md:flex-col gap-4 w-full md:w-auto md:max-w-[150px] justify-between">
@@ -47,8 +49,12 @@ export default function ServicesCard() {
             },
           ].map(({ title, value, percent, color, bg, text }, idx) => (
             <div key={idx} className={`${bg} p-4 rounded-xl text-center w-full`}>
-              <p className="text-sm text-gray-600 mb-2">{title}</p>
-              <div className="w-20 h-20 mx-auto">
+                <div className="flex gap-2 justify-between pb-2">
+
+              <p className="text-[12px] text-gray-600 mb-2">{title}</p>
+                  <p className={`font-semibold ${text}`}>{value}</p>
+                </div>
+              <div className="w-10 h-10 mx-auto">
                 <CircularProgressbarWithChildren
                   value={percent}
                   strokeWidth={10}
@@ -57,17 +63,16 @@ export default function ServicesCard() {
                     trailColor: "#e5e7eb",
                   })}
                 >
-                  <div className="text-sm font-semibold text-gray-800">{percent}%</div>
+                  <div className="text-[12px] font-semibold text-gray-800">{percent}%</div>
                 </CircularProgressbarWithChildren>
               </div>
-              <p className={`mt-2 font-semibold ${text}`}>{value}</p>
             </div>
           ))}
         </div>
 
         {/* Bar Chart Section */}
         <div className="flex-1 flex flex-col">
-          <div className="flex justify-between items-center mb-4 flex-wrap gap-2">
+          <div className="flex grow justify-between items-center mb-4 flex-wrap gap-2">
             <div className="flex gap-2 bg-gray-100 p-1 rounded-lg text-sm">
               <button className="bg-white text-gray-800 px-3 py-1 rounded-md shadow">Day</button>
               <button className="px-3 py-1 text-gray-500">Month</button>
@@ -78,7 +83,7 @@ export default function ServicesCard() {
             </button>
           </div>
 
-          <div className="h-40 bg-gradient-to-t from-blue-100 to-white rounded-xl flex items-end justify-around p-4">
+          <div className="h-40 flex-none bg-gradient-to-t from-blue-100 to-white rounded-xl flex items-end justify-around p-4">
             {[40, 60, 45, 80, 100, 60].map((h, i) => (
               <div
                 key={i}
@@ -94,6 +99,7 @@ export default function ServicesCard() {
             ))}
           </div>
         </div>
+      </div>
       </div>
 
       {/* Right Panel - Calibration Status */}
