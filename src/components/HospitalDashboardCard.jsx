@@ -1,5 +1,5 @@
 import React from "react";
-import { Plus } from "lucide-react";
+import { Plus, Box } from "lucide-react";
 
 export default function HospitalDashboardCard() {
   return (
@@ -10,17 +10,21 @@ export default function HospitalDashboardCard() {
         <div className="flex flex-col gap-4">
 
         <div className="flex items-start gap-4">
-          <div className="bg-blue-100 p-3 rounded-xl">
-            <div className="bg-blue-600 w-6 h-6 rounded flex items-center justify-center">
-              <span className="text-white text-sm">🏥</span>
+          <div className="bg-[#2563EB] p-3 rounded-[20px] relative">
+            <div className="bg-[#2563EB] w-6 h-6 rounded flex items-center justify-center">
+              <span className="text-white text-sm"><Box/></span>
             </div>
+            <p className="text-green-500 text-[18px] absolute bottom-[-7px] right-[0]">●</p>
           </div>
           <div className="flex flex-col gap-1">
+            <div className="flex ">
             <div className="text-xl font-semibold">City General Hospital</div>
-            <div className="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
-              <span className="text-green-500">● Online</span>
-              <span>• Last updated 2 mins ago</span>
-              <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded text-xs">Active Client</span>
+            <span className="text-blue-700 px-2 py-0.5 pt-2 rounded text-xs">Active Client</span>
+            </div>
+            <div className="flex text-[10px] items-center gap-2 text-sm text-gray-500 flex-wrap">
+              <p className="text-green-500">● Online</p>
+              <p className="mx-4">•</p>
+              <p> Last updated 2 mins ago</p>
             </div>
           </div>
         </div>
@@ -78,11 +82,11 @@ export default function HospitalDashboardCard() {
       </div>
 
         {/* Right Panel */}
-        <div className="flex flex-col items-stretch gap-4">
-          <button className="bg-linear-to-r from-[#2563EB] to-[#153885] text-white flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-sm whitespace-nowrap">
+        <div className="flex flex-col gap-2">
+          <button className="bg-linear-to-r from-[#2563EB] to-[#153885] text-white flex justify-center gap-2 px-4 py-2 rounded-xl text-sm whitespace-nowrap">
             <Plus size={16} /> Generate Report
           </button>
-          <div className="bg-radial-[at_25%_25%] from-[#C7CEDD] to-[#1D4ED8] to-75% w-full sm:w-40 h-20 rounded-xl flex items-center justify-center text-white font-mono text-sm text-center">
+          <div className="bg-radial-[at_25%_25%] from-[#C7CEDD] to-[#1D4ED8] to-75%  sm:w-40 rounded-xl flex h-[140px] items-center justify-center text-white font-mono text-sm text-center">
             XXXXXXXXXXXX<br />XXXXXXXXXXXX
           </div>
         </div>
