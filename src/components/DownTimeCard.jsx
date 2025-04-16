@@ -76,7 +76,7 @@ const DowntimeCards = () => {
                     </span>
                   ))}
                 </div>
-                <button className="h-[28px] bg-linear-to-r mt-[12px] from-[#2563EB] to-[#153885] text-white flex items-center justify-center gap-2 px-4 py-2 rounded-[8px] text-[10px] mt-[10px s] text-sm whitespace-nowrap">
+                <button className="h-[28px] bg-linear-to-r mt-[12px] from-[#2563EB] to-[#153885] cursor-pointer text-white flex items-center justify-center gap-2 px-4 py-2 rounded-[8px] text-[10px] mt-[10px s] text-sm whitespace-nowrap">
                   {card.button}
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </button>

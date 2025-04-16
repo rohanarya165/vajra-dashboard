@@ -81,10 +81,10 @@ export default function HospitalDashboardCard() {
 
         {/* Right Panel */}
         <div className="flex flex-col gap-2">
-          <button className="bg-linear-to-r from-[#2563EB] to-[#153885] text-white flex justify-center gap-2 px-4 py-2 rounded-xl text-sm whitespace-nowrap">
+          <button className="bg-linear-to-r from-[#2563EB] to-[#153885] cursor-pointer text-white flex justify-center gap-2 px-4 py-2 rounded-xl text-sm whitespace-nowrap">
             <Plus size={16} /> Generate Report
           </button>
-          <div className="bg-radial-[at_25%_25%] from-[#C7CEDD] to-[#1D4ED8] to-75%  sm:w-40 rounded-xl flex h-[140px] items-center justify-center text-white font-mono text-sm text-center">
+          <div className="bg-radial-[at_25%_25%] from-[#C7CEDD] to-[#1D4ED8] to-75% cursor-pointer sm:w-40 rounded-xl flex h-[140px] items-center justify-center text-white font-mono text-sm text-center">
             XXXXXXXXXXXX<br />XXXXXXXXXXXX
           </div>
         </div>
