@@ -125,7 +125,7 @@ const Sidebar = () => {
             </div>
 
             {/* Bottom */}
-            <div className="px-4 pb-4 space-y-3">
+            <div className="px-4 pb-4 ">
               <button className="w-full relative flex items-center gap-3 justify-center border border-white text-white cursor-pointer py-2 rounded-full text-sm font-semibold">
                 <Headphones size={16} className="absolute left-4" />
                 Contact us
@@ -195,7 +195,7 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <div className="px-4 pb-4 space-y-3">
+        <div className="px-4 pb-4">
           <button className="w-full relative flex items-center gap-3 justify-center border border-white text-white cursor-pointer py-2 rounded-full text-sm font-semibold">
             <Headphones size={16} className="absolute left-4" />
             Contact us
