@@ -62,7 +62,7 @@ const Sidebar = () => {
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 z-50 w-[250px] h-full bg-[#0E1D34] text-white flex flex-col justify-between lg:hidden"
+            className="fixed top-0 left-0 z-50 w-[250px] h-full overflow-hidden bg-[#0E1D34] text-white flex flex-col justify-between lg:hidden"
           >
             <div className="p-5">
               <div className="flex justify-between items-center text-[30px] mb-4">
