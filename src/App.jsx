@@ -20,7 +20,7 @@ const pieData2 = [
 
 function App() {
   return (
-    <div className="flex lg:h-screen md:h-screen ">
+    <div className="flex h-screen overflow-hidden">
       <Sidebar />
       <div className="flex-1 flex flex-col">
         <Topbar />        
